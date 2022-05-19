@@ -1,0 +1,54 @@
+package matematica;
+
+import java.util.Scanner;
+
+public class trabalho1 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		
+		float a1=0,r=0,an=0,Sn=0,q=0;
+	    int op=0,n=0;
+	    do {
+	    	System.out.println("[1]Progressao Aritmetica - PA\n");
+	    	System.out.println("[2]Progressoa Geometrica - PG\n");
+	    	System.out.println("[3]Sair\nEscolha sua opcao: ");
+	    	op = teclado.nextInt();
+	    	
+	    	switch(op) {
+	    	case 1:
+	    		System.out.println("\tProgressao Aritmetica - PA\n");
+	    		System.out.println("\nEntre com o valor do primeiro termo: ");
+	    		a1 = teclado.nextFloat();
+	    		System.out.println("\nEntre com o valor da razao: ");
+	    		do { r = teclado.nextFloat();
+	    		}while(r==0);
+	    		System.out.println("\nNumero de termos: ");
+	    		do { n = teclado.nextInt();
+	    		}while(n<=0);
+	    		an = (a1 + (n - 1) * r);
+	            Sn = a1 + an;
+	    		System.out.printf("\n\nE-nesimo termo da P.A. - an: %f\n\n",an);
+	    		System.out.printf("A Soma do termos da P.A. - Sn: %f\n\n",Sn);
+	    		break;
+	    		
+	    	case 2:
+	    		System.out.println("\tProgressao Geometrica - PG\n");
+	    		System.out.println("\nEntre com o valor do primeiro termo: ");
+	    		a1 = teclado.nextFloat();
+	    		System.out.println("\nEntre com o valor da razao: ");
+	    		do { r = teclado.nextFloat();
+	    		}while(r==0);
+	    		System.out.println("\nNumero de termos: ");
+	    		do { n = teclado.nextInt();
+	    		}while(n<=0);
+	    		an = (a1 * (pow(q,n-1)));
+	            Sn = (a1*(pow(q,n) - 1))/(q-1);
+	    		System.out.printf("\nE-nesimo termo da P.G. - an: %f\n\n",an);
+	    		System.out.printf("A Soma do termos da P.G. finita - Sn: %f\n\n",Sn);
+	    		break;
+	    	}
+	    
+	    }while(op != 3);
+	}
+}
