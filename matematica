@@ -7,7 +7,7 @@ public class trabalho1 {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		
-		float a1=0,r=0,an=0,Sn=0,q=0;
+		float a1=0,r=0,an=0,Sn=0;
 	    int op=0,n=0;
 	    do {
 	    	System.out.println("[1]Progressao Aritmetica - PA\n");
@@ -42,13 +42,12 @@ public class trabalho1 {
 	    		System.out.println("\nNumero de termos: ");
 	    		do { n = teclado.nextInt();
 	    		}while(n<=0);
-	    		an = (a1 * (pow(q,n-1)));
-	            Sn = (a1*(pow(q,n) - 1))/(q-1);
-	    		System.out.printf("\nE-nesimo termo da P.G. - an: %f\n\n",an);
-	    		System.out.printf("A Soma do termos da P.G. finita - Sn: %f\n\n",Sn);
+	    		double an1 = (a1 * (Math.pow(r,n-1)));
+	            double Sn1 = (a1*(Math.pow(r,n) - 1))/(r-1);
+	    		System.out.printf("\nE-nesimo termo da P.G. - an: %f\n\n",an1);
+	    		System.out.printf("A Soma do termos da P.G. finita - Sn: %f\n\n",Sn1);
 	    		break;
 	    	}
-	    
 	    }while(op != 3);
 	}
 }
